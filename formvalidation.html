@@ -1,0 +1,109 @@
+<html>
+<head>
+
+<title>Form Validation</title>
+
+<script language="javascript">
+
+function validate()
+{
+ var nm=document.form.name.value;
+ var pass=document.form.pass1.value;
+ var re=document.form.pass2.value;
+ var email=document.form.mail.value;
+
+alphaExp=/^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+if(((nm==null)||(nm==""))||((pass==null)||(pass==""))||((email==null)||(email=="")))
+{
+ alert("Field can't be blank");
+ return false;
+}
+if(pass.length<6)
+{
+ alert("Password should be of minimum 6 char");
+ return false;
+}
+
+if(pass!=re)
+{
+ alert("Password didn't match");
+ return false;
+}
+
+ if(!email.match(alphaExp))
+{
+ alert("E-mail is not in correct format");
+ return false;
+}
+
+ if(iscorrect(pass))
+{
+return false;
+}
+else
+{
+ alert("Aapka Panjikaran ho gya h");
+}
+}
+function iscorrect(elem1)
+{
+ alphaExp=/^[A-Z]\w*$/
+ if(!elem1.match(alphaExp))
+ {
+  alert("First character needs to be in UPPERCASE");
+  return true;
+ }
+}
+
+</script>
+</head>
+
+<body style="text-align:center;background-color:#33E0FF;">
+
+<marquee behavior="scroll" direction="right">Welcome to Delhi Technological university!!</marquee>
+
+<img src="dtu.png"align="right" style="width:250px;height:250px;">
+
+<font color="#3633FF">
+
+<form name="form" onSubmit="validate()">
+<br>
+<br>
+<br>
+Name*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name">
+<br>
+E-Mail*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="mail">
+<br>
+Password*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pass1">
+<br>
+Confirm Password*
+<input type="password" name="pass2">
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">
+<br>
+<br>
+<br>
+<br>
+</font>
+<font color="red">
+* - Fields are mandatory!!
+</form>
+</font>
+<center>
+<br>
+<br>
+<a href="form.html">
+NEXT</center></a>
+<center>
+<br>
+<br>
+<a href="b.html">
+Back</center></a>
+</body>
+</html> 

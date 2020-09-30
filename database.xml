@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE STUDENT[
+<!ELEMENT student_imformation (ad+)>
+<!ELEMENT ad (rollno,name,college)>
+<!ELEMENT rollno (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT college (#PCDATA)>
+]>
+
+<?xml-stylesheet type="text/css" href="student.css"?>
+
+<student_information>
+
+<h3>STUDENT 1</h3>
+<ad><label>rollno:<rollno>1</rollno></label></ad>
+<ad><label>Name:<name>abc</name></label></ad>
+<ad><label>College:<college>abc</college></label></ad>
+
+
+<h3>STUDENT 2</h3>
+<ad><label>rollno:<rollno>2</rollno></label></ad>
+<ad><label>Name:<name>abc</name></label></ad>
+<ad><label>College:<college>xyz</college></label></ad>
+
+<h3>STUDENT 3</h3>
+<ad><label>rollno:<rollno>3</rollno></label></ad>
+<ad><label>Name:<name>abc</name></label></ad>
+<ad><label>College:<college>def</college></label></ad>
+
+
+<h3>STUDENT 4</h3>
+<ad><label>rollno:<rollno>4</rollno></label></ad>
+<ad><label>Name:<name>abc</name></label></ad>
+<ad><label>College:<college>ghi</college></label></ad>
+
+
+<h3>STUDENT 5</h3>
+<ad><label>rollno:<rollno>5</rollno></label></ad>
+<ad><label>Name:<name>abc</name></label></ad>
+<ad><label>College:<college>ffg</college></label></ad>
+
+</student_information>
+
+
+
